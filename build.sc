@@ -377,6 +377,10 @@ object contrib extends MillModule {
     )
     def testArgs = T(scalanativelib.testArgs())
   }
+
+  object webpacklib extends MillModule {
+    def moduleDeps = Seq(scalajslib)
+  }
 }
 
 
