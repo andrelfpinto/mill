@@ -91,8 +91,8 @@ trait ScalaJSWebpackBaseModule extends ScalaJSDepsModule {
     os.write.over(
       params.outputDirectory / "package.json",
       ujson.Obj(
-        "dependencies" -> deps.dependencies,
-        "devDependencies" -> (deps.devDependencies ++ webpackDevDependencies)
+        "dependencies" -> jsDeps.dependencies,
+        "devDependencies" -> (jsDeps.devDependencies ++ webpackDevDependencies)
       ).render(2) + "\n"
     )
   }
